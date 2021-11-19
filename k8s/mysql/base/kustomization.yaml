@@ -1,0 +1,6 @@
+resources:
+- namespace.yaml
+- deployconfig.yaml
+- pvc.yaml
+- service.yaml
+- secret.yaml

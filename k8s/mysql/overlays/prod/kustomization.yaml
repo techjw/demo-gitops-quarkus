@@ -1,0 +1,9 @@
+# https://github.com/kubernetes-sigs/kustomize/tree/master/examples/mySql
+
+resources:
+- ../../base
+patchesStrategicMerge:
+- secret.yaml
+
+
+
