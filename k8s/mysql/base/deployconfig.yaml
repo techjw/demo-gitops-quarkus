@@ -36,7 +36,7 @@ spec:
             secretKeyRef:
               key: database-name
               name: mysql
-        image: ' '
+        image: image-registry.openshift-image-registry.svc:5000/openshift/mysql:8.0-el8
         imagePullPolicy: IfNotPresent
         livenessProbe:
           exec:
@@ -47,9 +47,13 @@ spec:
             - MYSQL_PWD="$MYSQL_PASSWORD" mysqladmin -u $MYSQL_USER ping
           initialDelaySeconds: 30
           timeoutSeconds: 1
+          failureThreshold: 3
+          periodSeconds: 10
+          successThreshold: 1          
         name: mysql
         ports:
         - containerPort: 3306
+          protocol: TCP
         readinessProbe:
           exec:
             command:
@@ -59,6 +63,9 @@ spec:
             - MYSQL_PWD="$MYSQL_PASSWORD" mysqladmin -u $MYSQL_USER ping
           initialDelaySeconds: 5
           timeoutSeconds: 1
+          failureThreshold: 3
+          periodSeconds: 10
+          successThreshold: 1
         resources:
           limits:
             memory: 512Mi
@@ -69,6 +76,8 @@ spec:
       - name: mysql-data
         persistentVolumeClaim:
           claimName: mysql
+      terminationMessagePath: /dev/termination-log	
+      terminationMessagePolicy: File                        
   triggers:
   - imageChangeParams:
       automatic: true

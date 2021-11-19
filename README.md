@@ -11,3 +11,9 @@ See code at: https://github.com/sa-ne/quarkify_webapp
 
 ### Argo CD Application
 * Define quarkus/mysql application for deployment/management via Argo CD
+
+> **_NOTE:_** To use the manifests here with ArgoCD run the command below to set permission ArgoCD's required permissions:
+
+```
+oc adm policy add-cluster-role-to-user cluster-admin system:serviceaccount:openshift-gitops:openshift-gitops-argocd-application-controller
+```
