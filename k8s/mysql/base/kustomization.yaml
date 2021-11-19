@@ -1,6 +1,6 @@
 resources:
 - namespace.yaml
-- deployconfig.yaml
+- deployment.yaml
 - pvc.yaml
 - service.yaml
 - secret.yaml
