@@ -3,9 +3,6 @@ kind: Deployment
 metadata:
   name: mysql
   namespace: quarkify
-  annotations:
-    image.openshift.io/triggers: >-
-      [{"from":{"kind":"ImageStreamTag","name":"mysql:8.0-el8","namespace":"openshift"},"fieldPath":"spec.template.spec.containers[?(@.name==\"mysql\")].image"}]  
 spec:
   replicas: 1
   selector:
@@ -40,7 +37,7 @@ spec:
             secretKeyRef:
               key: database-name
               name: mysql
-        image: ' '
+        image: 'registry.redhat.io/rhel8/mysql-80@sha256:54a45c2e00a0d83605d7c2f262ca515d8f5fa1e47ea289e49cfee87c89e3d7ab'
         imagePullPolicy: IfNotPresent
         livenessProbe:
           exec:
