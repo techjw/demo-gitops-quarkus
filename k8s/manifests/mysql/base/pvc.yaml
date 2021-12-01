@@ -2,7 +2,7 @@
   kind: PersistentVolumeClaim
   metadata:
     name: mysql
-    namespace: quarkify
+    namespace: insult
   spec:
     accessModes:
     - ReadWriteOnce

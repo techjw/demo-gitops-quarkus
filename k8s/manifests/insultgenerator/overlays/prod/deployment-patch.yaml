@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: insult-app
+  namespace: insult
+spec:
+  template:
+    spec:
+      containers:
+        - name: insult-app
+          image: 'quay.io/ajhajj/insult.gen:v1.0'

@@ -2,7 +2,7 @@
 Kubernetes manifests for deploying the Quarkus insult generator application via Argo CD
 
 ### Quarkus web application
-See code at: https://github.com/sa-ne/quarkify_webapp
+See code at: https://github.com/sa-ne/InsultGenerator
 
 ### MySQL database (persistent storage)
 * Quarkus web application will initiate stub data into the tables on startup

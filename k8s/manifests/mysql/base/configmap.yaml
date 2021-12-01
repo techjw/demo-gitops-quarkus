@@ -1,0 +1,147 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: sql-init
+  namespace: insult
+data:
+  sql.txt: >+
+    CREATE TABLE insult_history (insult_time datetime, ip VARCHAR(15), insult
+    VARCHAR(255));
+
+
+    INSERT INTO insult_history (insult_time, ip, insult) VALUES (now(),
+    "192.168.122.45", "You are a bad guy!");
+
+    INSERT INTO insult_history (insult_time, ip, insult) VALUES (now(),
+    "192.168.122.34", "You smell bad!");
+
+    INSERT INTO insult_history (insult_time, ip, insult) VALUES (now(),
+    "192.168.122.12", "You waddle like an elephant!");
+
+    INSERT INTO insult_history (insult_time, ip, insult) VALUES (now(),
+    "192.168.122.5", "You slide like an owl!");
+
+    INSERT INTO insult_history (insult_time, ip, insult) VALUES (now(),
+    "192.168.122.14", "You sing like a clown!");
+
+    INSERT INTO insult_history (insult_time, ip, insult) VALUES (now(),
+    "192.168.122.45", "You sink like a tank!");
+
+    INSERT INTO insult_history (insult_time, ip, insult) VALUES (now(),
+    "192.168.122.34", "You smell like a diaper!");
+
+    INSERT INTO insult_history (insult_time, ip, insult) VALUES (now(),
+    "192.168.122.5", "You have the backbone of a sponge!");
+
+    INSERT INTO insult_history (insult_time, ip, insult) VALUES (now(),
+    "192.168.122.14", "You are as strong as an ant!");
+
+    INSERT INTO insult_history (insult_time, ip, insult) VALUES (now(),
+    "127.0.0.1", "You smell like dispair!");
+
+    INSERT INTO insult_history (insult_time, ip, insult) VALUES (now(),
+    "127.0.0.1", "You move as elegantly as an elephant!");
+
+    INSERT INTO insult_history (insult_time, ip, insult) VALUES (now(),
+    "127.0.0.1", "You are a node.js 'developer'!");
+
+
+    CREATE TABLE words (type_id TINYINT, word VARCHAR(25));
+
+
+    INSERT INTO words (type_id, word) VALUES (1, "stink");
+
+    INSERT INTO words (type_id, word) VALUES (1, "run");
+
+    INSERT INTO words (type_id, word) VALUES (1, "laugh");
+
+    INSERT INTO words (type_id, word) VALUES (1, "walk");
+
+    INSERT INTO words (type_id, word) VALUES (1, "stand");
+
+    INSERT INTO words (type_id, word) VALUES (1, "talk");
+
+    INSERT INTO words (type_id, word) VALUES (1, "cry");
+
+    INSERT INTO words (type_id, word) VALUES (1, "waddle");
+
+    INSERT INTO words (type_id, word) VALUES (1, "sound");
+
+    INSERT INTO words (type_id, word) VALUES (1, "fumble");
+
+    INSERT INTO words (type_id, word) VALUES (1, "crawl");
+
+    INSERT INTO words (type_id, word) VALUES (1, "screech");
+
+    INSERT INTO words (type_id, word) VALUES (1, "yelp");
+
+    INSERT INTO words (type_id, word) VALUES (1, "snivel");
+
+    INSERT INTO words (type_id, word) VALUES (1, "whimper");
+
+    INSERT INTO words (type_id, word) VALUES (1, "whine");
+
+    INSERT INTO words (type_id, word) VALUES (1, "sob");
+
+    INSERT INTO words (type_id, word) VALUES (1, "howl");
+
+    INSERT INTO words (type_id, word) VALUES (1, "blubber");
+
+    INSERT INTO words (type_id, word) VALUES (2, "codfish");
+
+    INSERT INTO words (type_id, word) VALUES (2, "chimpanzee");
+
+    INSERT INTO words (type_id, word) VALUES (2, "duck");
+
+    INSERT INTO words (type_id, word) VALUES (2, "circus clown");
+
+    INSERT INTO words (type_id, word) VALUES (2, "seal");
+
+    INSERT INTO words (type_id, word) VALUES (2, "ringworm");
+
+    INSERT INTO words (type_id, word) VALUES (2, "toad");
+
+    INSERT INTO words (type_id, word) VALUES (2, "hyena");
+
+    INSERT INTO words (type_id, word) VALUES (2, "oaf");
+
+    INSERT INTO words (type_id, word) VALUES (2, "lout");
+
+    INSERT INTO words (type_id, word) VALUES (2, "sphincter");
+
+    INSERT INTO words (type_id, word) VALUES (2, "turd");
+
+    INSERT INTO words (type_id, word) VALUES (2, "goblin");
+
+    INSERT INTO words (type_id, word) VALUES (2, "hobgoblin");
+
+    INSERT INTO words (type_id, word) VALUES (2, "pustule");
+
+    INSERT INTO words (type_id, word) VALUES (3, " sweaty");
+
+    INSERT INTO words (type_id, word) VALUES (3, " slimy");
+
+    INSERT INTO words (type_id, word) VALUES (3, " wet");
+
+    INSERT INTO words (type_id, word) VALUES (3, " greasy");
+
+    INSERT INTO words (type_id, word) VALUES (3, " wounded");
+
+    INSERT INTO words (type_id, word) VALUES (3, " confused");
+
+    INSERT INTO words (type_id, word) VALUES (3, " dazed");
+
+    INSERT INTO words (type_id, word) VALUES (3, " well-oiled");
+
+    INSERT INTO words (type_id, word) VALUES (3, " dripping");
+
+    INSERT INTO words (type_id, word) VALUES (3, " gelatinous");
+
+    INSERT INTO words (type_id, word) VALUES (3, "n excited");
+
+    INSERT INTO words (type_id, word) VALUES (3, " frightened");
+
+    INSERT INTO words (type_id, word) VALUES (3, " dejected");
+
+    INSERT INTO words (type_id, word) VALUES (3, " flustered");
+

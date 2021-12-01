@@ -1,0 +1,12 @@
+resources:
+- namespace.yaml
+- ../../manifests/mysql/overlays/prod
+- ../../manifests/insultgenerator/overlays/prod
+
+patches:
+  - patch: |-
+      - op: replace
+        path: "/metadata/namespace"
+        value: "insult-prd"
+    target:
+      name: .*
