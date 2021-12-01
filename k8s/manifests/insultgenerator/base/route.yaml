@@ -6,6 +6,7 @@ metadata:
   labels:
     app: insult-app
 spec:
+  path: "/counter"
   to:
     kind: Service
     name: insult-app
