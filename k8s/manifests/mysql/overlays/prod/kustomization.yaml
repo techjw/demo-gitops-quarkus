@@ -1,0 +1,7 @@
+resources:
+- ../../base
+patchesStrategicMerge:
+- secret.yaml
+
+
+

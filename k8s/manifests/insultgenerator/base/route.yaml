@@ -1,0 +1,15 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: insult-app
+  namespace: insult
+  labels:
+    app: insult-app
+spec:
+  path: "/counter"
+  to:
+    kind: Service
+    name: insult-app
+    weight: 100
+  port:
+    targetPort: 8080-tcp
