@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/giofontana/demo-gitops-quarkus.git'
+    repoURL: 'https://github.com/sa-ne/demo-gitops-quarkus.git'
     path: k8s/environments/qa
     targetRevision: main
   destination:
