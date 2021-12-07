@@ -96,6 +96,22 @@ kustomize build ./k8s/environments/prod/ | oc apply -f -
 
 ## Deploying with ArgoCD
 
+**NOTE**
+
+If you have not already, create your own fork of this repository, then use a separate branch for your demo.
+1. Create a new branch for your demo, for example: `git checkout -b demo`
+1. Update both the deployment files `k8s/argocd-app-prod.yaml` and `k8s/argocd-app-qa.yaml` to use your new repo/branch
+```
+...
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/YOUR_GH_USER/demo-gitops-quarkus.git'
+    path: k8s/environments/prod
+    targetRevision: YOUR_GH_BRANCH_NAME
+...
+```
+
 ### Pre-requisites
 
 1. You should have ArgoCD running on namespace `openshift-gitops`
@@ -106,16 +122,16 @@ oc adm policy add-cluster-role-to-user cluster-admin system:serviceaccount:opens
 
 ### Deployment
 
-Run the following command to create the ArgoCD Application, which will deploy the application:
+Run the following command (using your branched file version) to create the ArgoCD Application, which will deploy the application:
 
 **For Production** 
 
 ```
-oc apply -f ./k8s/arogcd-app-prod.yaml
+oc apply -f ./k8s/argocd-app-prod.yaml
 ```
 
 **For QA** 
 
 ```
-oc apply -f ./k8s/arogcd-app-qa.yaml
+oc apply -f ./k8s/argocd-app-qa.yaml
 ```
