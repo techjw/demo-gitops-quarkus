@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/sa-ne/demo-gitops-quarkus.git'
+    repoURL: 'https://github.com/techjw/demo-gitops-quarkus.git'
     path: k8s/environments/prod
-    targetRevision: main
+    targetRevision: demo
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default
