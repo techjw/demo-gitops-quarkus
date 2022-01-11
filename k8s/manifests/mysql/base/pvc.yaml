@@ -9,3 +9,4 @@
     resources:
       requests:
         storage: 1Gi
+    storageClassName: nutanix-volume
