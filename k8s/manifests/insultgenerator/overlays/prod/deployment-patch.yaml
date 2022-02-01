@@ -8,4 +8,4 @@ spec:
     spec:
       containers:
         - name: insult-app
-          image: 'quay.io/ajhajj/insult.gen:v1.0'
+          image: 'quay.io/ajhajj/insult.gen:v2.0'
