@@ -5,6 +5,7 @@ metadata:
   namespace: insult
   labels:
     app: insult-app
+    app.kubernetes.io/part-of=insult-app
 spec:
   replicas: 1
   selector:
